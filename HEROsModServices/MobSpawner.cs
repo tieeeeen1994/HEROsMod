@@ -237,7 +237,7 @@ namespace HEROsMod.HEROsModServices
 
 		private void bMod_onLeftClick(object sender, EventArgs e, bool left)
 		{
-			var mods = ModLoader.Mods.Select(x=>x.Name).ToList();
+			var mods = ModLoader.Mods.Select(x => x.Name).ToList();
 			mods = mods.Intersect(npcList.Select(npc => npc.Mod?.Name)).ToList();
 			mods.Sort();
 			if (mods.Count == 0)
@@ -600,7 +600,7 @@ namespace HEROsMod.HEROsModServices
 
 			//if (npc.NetID < 0) return;
 			CurrentNPC = npc;
-			ModUtils.LoadNPC(npc.Type);
+			ModUtils.LoadNPC(npc.Type, immediate: true);
 			mobImage.Texture = TextureAssets.Npc[npc.Type];
 			mobImage.SourceRectangle = new Rectangle(0, 0, (int)mobImage.Texture.Value.Width, (int)mobImage.Texture.Value.Height / Main.npcFrameCount[npc.Type]);
 			//mobImage.ForegroundColor = CurrentNPC.AlphaColor;

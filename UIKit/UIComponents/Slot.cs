@@ -237,7 +237,7 @@ namespace HEROsMod.UIKit.UIComponents
 			{
 				this.item = Main.player[Main.myPlayer].trashItem;
 			}
-			Main.instance.LoadItem(item.type);
+			ModUtils.LoadItem(item.type);
 			Texture2D texture = TextureAssets.Item[item.type].Value;
 			if (this.IsTrashCan && item.type == 0)
 			{

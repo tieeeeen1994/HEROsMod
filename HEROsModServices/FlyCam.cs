@@ -6,6 +6,7 @@ using System;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.GameInput;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace HEROsMod.HEROsModServices
@@ -33,8 +34,8 @@ namespace HEROsMod.HEROsModServices
 			Enabled = false;
 			LockCamera = false;
 			this._name = "Fly Camera";
-			Main.instance.LoadItem(493);
-			this._hotbarIcon = new UIKit.UIImage(TextureAssets.Item[493]);
+			Main.instance.LoadItem(ItemID.AngelWings);
+			this._hotbarIcon = new UIKit.UIImage(TextureAssets.Item[ItemID.AngelWings]);
 			this._hotbarIcon.onLeftClick += _hotbarIcon_onLeftClick;
 			this._hotbarIcon.onRightClick += _hotbarIcon_onRightClick;
 			this.HotbarIcon.Tooltip = HEROsMod.HeroText("FlyCamEnableTooltip");
