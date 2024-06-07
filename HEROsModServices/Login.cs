@@ -65,7 +65,10 @@ namespace HEROsMod.HEROsModServices
 		{
 			if (LoggedIn)
 			{
-				HEROsModNetwork.LoginService.RequestLogout();
+				if (!Main.LocalPlayer.dead)
+				{
+					HEROsModNetwork.LoginService.RequestLogout();
+				}
 			}
 			else
 			{
